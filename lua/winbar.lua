@@ -1,8 +1,14 @@
 -- Add variable
 local barbecue = require('barbecue.ui')
 
+-- Setup navic
+require('nvim-navic').setup({
+   highlight = true
+})
+
 -- Setup barbecue
 require('barbecue').setup({
+   theme = 'catppuccin',
    attach_nvic = false,
    create_autocmd = false
 })

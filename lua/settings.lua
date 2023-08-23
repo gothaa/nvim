@@ -2,13 +2,12 @@
 local set = vim.opt
 
 -- Setting neovim
-set.updatetime = 0
 set.relativenumber = true
 set.number = true
 set.backup = false
 set.writebackup = false
 set.cursorline = true
-set.cursorcolumn = true
+set.cursorcolumn = false
 set.wrap = false
 set.expandtab = true
 set.shiftwidth = 3

@@ -18,23 +18,24 @@ vim.opt.rtp:prepend(lazypath)
 
 -- List plugins (lazy)
 local plugins_lazy = {
-   'sitiom/nvim-numbertoggle',
+   {
+      'sitiom/nvim-numbertoggle',
+      lazy = false
+   },
    {
       'nvim-tree/nvim-web-devicons',
       lazy = true
    },
-   {
-      'nvim-tree/nvim-tree.lua',
-      keys = {
-         { '<F12>', '<cmd>NvimTreeOpen<cr>', mode = 'n' }
-      }
-   },
+   'nvim-tree/nvim-tree.lua',
    'nvim-lualine/lualine.nvim',
    {
       'nvim-treesitter/nvim-treesitter',
       cmd = 'TSUpdate'
    },
-   'folke/tokyonight.nvim',
+   {
+      'catppuccin/nvim',
+      name = 'catppuccin',
+   },
    {
       'folke/which-key.nvim',
       event = 'VeryLazy',
@@ -47,12 +48,13 @@ local plugins_lazy = {
    },
    'neovim/nvim-lspconfig',
    {
-      "utilyre/barbecue.nvim",
-      name = "barbecue",
+      'utilyre/barbecue.nvim',
+      name = 'barbecue',
       dependencies = {
-         "SmiteshP/nvim-navic",
+         'SmiteshP/nvim-navic',
       }
    },
+   'NvChad/nvim-colorizer.lua',
    {
       'hrsh7th/nvim-cmp',
       --event = 'InsertEnter',
@@ -63,8 +65,8 @@ local plugins_lazy = {
          'hrsh7th/cmp-path',
          'hrsh7th/cmp-cmdline',
          {
-            "L3MON4D3/LuaSnip",
-            build = "make install_jsregexp",
+            'L3MON4D3/LuaSnip',
+            build = 'make install_jsregexp',
             dependencies = {
                'rafamadriz/friendly-snippets'
             }
@@ -80,7 +82,7 @@ local opts_lazy = {
       lazy = true
    },
    install = {
-      colorscheme = { 'tokyonight' },
+      colorscheme = { 'catppuccin-macchiato' },
       missing = true
    },
    diff = {
