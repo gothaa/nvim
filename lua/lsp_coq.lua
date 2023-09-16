@@ -25,7 +25,7 @@ lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities {
    end
 })
 
-local servers = {'clangd', 'pyright', 'lua_ls'}
+local servers = {'clangd', 'pyright'}
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup(coq.lsp_ensure_capabilities {
   })
