@@ -1,2 +1,2 @@
 -- Setup lualine
-require('lualine').setup()
+require'lualine'.setup()
